@@ -1,13 +1,13 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = ' Preussen';
+const nuevaString = 'Preussen';
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 1850;
 
 // Crea una variable booleana:
-const nuevoBool = True;
+const nuevoBool = "True";
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -28,46 +28,65 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  
+  var step = "str"
+  return step
 }
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  
+  var step = suma (x,y)
+  return step
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  
+  var step = x - y
+  return step
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  
+  var step = x * y
+  return step
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  
+  var step = x / y
+  return step
 }
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (x===y) {
+    return true;
+    
+  }
+return false
 }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  var abc1 = "alo" // declaro funcion string para valores str 1 y str2
+  var abc2 = "alo"
+  var abc1 = str1 // las hago valer como los parámetros str1 y str2
+  var abc2 = str2
+
+
+  if (abc1.length === abc2.length){
+    return true ;
+
+  }
+  return false;
 }
 
 function menosQueNoventa(num) {
