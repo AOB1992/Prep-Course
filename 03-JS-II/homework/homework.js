@@ -263,25 +263,21 @@ function tablaDelSeis(){
   
 
   // va del 0 al 10
-
+let devarray2 = []
 var devarray = ""
 var resmul = 0
   
 for (i = 0 ; i < 11; i++) {
 
-resmul = i * 6
+  devarray2.push (i * 6)
 
-if (i=== 10) {
-  devarray = devarray + resmul 
-}else {
-  devarray = devarray + resmul + ", "
 }
 
 
 
-  } //termina buclef for
+   //termina buclef for
 
-  return devarray
+  return devarray2
 }
 
 function tieneTresDigitos(numero){
