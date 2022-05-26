@@ -3,18 +3,25 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  return array [0]
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+var arrable = []
+arrable = array
+var devolvetion = arrable [arrable.length - 1]
+  return devolvetion
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+
+  return array.length
 }
 
 
@@ -23,6 +30,16 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+
+  var devolvetion = []
+
+  for ( i = 0 ; i < array.length ; i++) {
+
+devolvetion [i] = array [i] + 1
+
+  }
+
+  return devolvetion
 }
 
 
@@ -30,6 +47,10 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  var devolvetion = []
+  devolvetion = array
+  devolvetion.push (elemento)
+  return devolvetion
 }
 
 
@@ -38,6 +59,12 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+
+  var errey = []
+  errey = array
+  errey.unshift (elemento)
+
+  return errey
 }
 
 
@@ -47,6 +74,38 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  //if (i = 0) {
+   // devolvetion = devolvetion +  palabras[i] + " "
+  //}else if (i = palabras.length) {
+   // devolvetion = devolvetion + palabras[i]
+  //}else {
+   // devolvetion = devolvetion + palabras[i] + " "
+  //}
+
+
+ //if ( i = palabras.length) {
+   // devolvetion = devolvetion + palabras[i]  
+    //return devolvetion
+   //}
+  var devolvetion = "hola"
+devolvetion = ""
+var retornation = "casa"
+retornation = ""
+
+  for (i = 0 ; i < palabras.length; i++){
+
+    
+    devolvetion = devolvetion + palabras[i] + " "
+
+  }
+
+  for (i = 0 ; i < devolvetion.length - 1; i++) {
+
+retornation = retornation + devolvetion[i]
+
+  }
+
+  return retornation
 }
 
 
