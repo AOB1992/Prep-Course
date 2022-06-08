@@ -320,18 +320,35 @@ function mesesDelAño(array) {
   // Tu código:
 
   var paladin = []
+  var herreronuevo = []
   var estamarzo = false
   var estanoviembre = false
   var estaenero = false
   
 paladin = array
   
-//for ( i = 0; i < paladin.length - 1; i++ ) {
-  //papa = paladin.push(i)
-//}
+for ( i = 0; i < paladin.length - 1; i++ ) {
+  if (paladin[i] === "Enero") {
+    herreronuevo.push("Enero")
+    estaenero = true
+  }
+  if (paladin[i] === "Marzo") {
+    herreronuevo.push("Marzo")
+    estamarzo = true
+  }
+
+  if (paladin[i] === "Noviembre") {
+    herreronuevo.push("Noviembre")
+    estanoviembre = true
+  }
+}
 
 
-  return paladin.length
+if (estanoviembre === true && estamarzo = true && estaenero = true) {
+  return  herreronuevo
+}
+
+return  "No se encontraron los meses pedidos"
 }
 
 
