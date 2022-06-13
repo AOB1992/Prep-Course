@@ -1,11 +1,21 @@
 // No cambies los nombres de las funciones.
 
+const { CONFIG_ERROR_MODE_REQUIRED } = require("simple-git/src/lib/tasks/clean")
+
 function crearGato (nombre, edad) {
   // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
   // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+  var novoobjeto = {
+    nombre: nombre,
+    edad: edad,
+    meow: function() {
+      return "Meow!"
+    }
+  }
+  return novoobjeto
 }
 
 function agregarPropiedad (objeto, property) {
@@ -13,6 +23,9 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  var novoobjeto = objeto
+  novoobjeto[property] = null
+  return novoobjeto
 }
 
 function invocarMetodo (objeto, metodo) {
@@ -20,13 +33,21 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
+  var apalapa = ""
+  var novoobjeto = objeto
+  objeto[metodo]()
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
+var drei = 3
+var lala = objetoMisterioso
 
+drei = lala.numeroMisterioso 
+drei = drei * 5
+return drei
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
@@ -34,19 +55,30 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+  var lala = objeto
+  delete lala[unaPropiedad]
+  return lala
 }
 
 function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-
+  const novoboto = {
+    nombre: nombre,
+     email: email,
+     password: password,
+  }
+return novoboto
 }
 
 function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+  if (usuario["email"] === null) {return false}
+  if (usuario["email"] == undefined) {return false}
+  if (usuario["email"] !== null) {return true}
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -54,6 +86,8 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (objeto[propiedad] == undefined) { return false}
+  return true
 }
 
 function verificarPassword (usuario, password) {
@@ -61,12 +95,16 @@ function verificarPassword (usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
+  if ( usuario.password === password) {return true}
+  return false
 }
 
 function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
+  usuario.password = nuevaPassword
+  return usuario
 }
 
 function agregarAmigo (usuario, nuevoAmigo) {
@@ -74,6 +112,8 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+  usuario.amigos.push (nuevoAmigo)
+  return usuario
 }
 
 function pasarUsuarioAPremium (usuarios) {
@@ -82,6 +122,18 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  var errey = []
+  
+  errey = usuarios
+  
+    for ( i = 0 ; i < errey.length ; i++) {
+
+        errey [i]["esPremium"] = true
+       
+      }
+    
+      return  errey
+      
 }
 
 function sumarLikesDeUsuario (usuario) {
@@ -91,6 +143,17 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+var sumatoria = 3
+sumatoria = 0
+var erreyposts = usuario.posts
+
+for (i = 0; i < erreyposts.length; i++) {
+  
+sumatoria = sumatoria + erreyposts[i]["likes"]
+
+}
+  return sumatoria
+  //return erreyposts[0]["likes"]
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -104,7 +167,28 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
 
-}
+// como agregar una funcion a un objeto
+
+  //la funcion
+ producto.calcularPrecioDescuento = function calcularPrecioDescuento() {
+    var precioso = 0
+    var descontoso = 1 -  this.porcentajeDeDescuento
+    precioso = this.precio * descontoso
+    return precioso
+  }
+  return producto
+ } 
+ 
+
+ 
+ //function calcularPrecioDescuento (producto) {
+//var precioso = 0
+//var descontoso = 1 -  producto.porcentajeDeDescuento
+//precioso = producto.precio * descontoso
+///return precioso
+//return producto
+  
+//
 
 // No modificar nada debajo de esta línea
 // --------------------------------
