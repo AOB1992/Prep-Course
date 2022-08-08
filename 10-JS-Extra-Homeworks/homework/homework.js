@@ -10,22 +10,74 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  casa =  Object.keys(objeto)
+borrado = new Array
+respuesta = new Array
+agregado = new Array
+
+for (i = 0; i<= casa.length - 1 ;i++) {
+
+  //agregado = borrado //borro data anterior
+  agregado.push(casa[i])
+  agregado.push(objeto[casa[i]])
+respuesta.push(agregado)
+agregado = borrado
+}
+
+ //return objeto[casa[0]]// + " yyy  c" + casa [1]  + " yyy  c" + casa [2]  + " yyy  c" + casa [3]  + "lenght es  " + casa.length
+ //agregado.push("x")
+  ///agregado.push(1)
+//respuesta.push(agregado)
+return respuesta
 }
 
 
 function numberOfCharacters(string) {
-  //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
+  //La función recibe un string. Recorre el string y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+var obj = {}
+
+//asignar valores numéricos primero
+
+for (i= 0; i<= string.length - 1; i++){
+
+  obj[string[i]] = 0
+
 }
+  for (i= 0; i<= string.length - 1; i++){
+
+    obj[string[i]] = obj[string[i]] + 1
+
+  }
 
 
+
+//obj["casa"] = 1
+// obj["casa"] =  obj["casa"] + 1
+//funciona esto
+
+return obj
+}
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+
+  var mayusculas = ""
+  var minusculas = ""
+  var respuesta = ""
+
+  for (i = 0; i <= s.length - 1; i++) {
+
+     if ( s[i] === s[i].toUpperCase() )    {mayusculas = mayusculas + s[i]}            //SI ES MAYUSCULA AGREGAR A MATRIZ/STRING "MAYUSCULAS"
+     if ( s[i] === s[i].toLowerCase() )    {minusculas = minusculas + s[i]}          //SI ES MINUSCULA AGREGAR EN STRING "MINUSCULAS"
+  }
+
+respuesta = mayusculas + minusculas
+  return respuesta
 }
 
 
@@ -35,6 +87,11 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  a = " "
+  b = " "
+
+  if (a === b) {return "Siiii"}
+return "noooo"
 } 
 
 
@@ -43,14 +100,73 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+
+  //primero darlo vuelta
+
+  var numerostr = ""
+  var numeroreves = "casa"
+  numeroreves = ""
+  var cuenta = 0
+
+  numerostr = numero.toString()
+
+  cuenta = numerostr.length - 1
+
+  for (i= 0; i<= numerostr.length - 1; i++) {
+numeroreves = numeroreves + numerostr[cuenta]
+cuenta = cuenta - 1
+  }
+
+if (numerostr == numeroreves) {
+  return "Es capicua" 
+
+} else {
+return "No es capicua"
+  }
+
 }
+  
+
 
 
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-}
+
+  var novastr = ""
+  var sumar = "si"
+  
+    for (i = 0; i <= cadena.length - 1; i++) {
+
+      //sumar = "si"
+
+      //if (cadena[i] == "a") { sumar = "no"}
+     // if (cadena[i] == "b") { sumar = "no"}
+      //if (cadena[i] == "c") { sumar = "no"}
+
+      if (cadena[i] === "a") {
+
+      }else if (cadena[i] === "b") {
+
+        } else if (cadena[i] === "c"){
+
+        }
+        else {
+          novastr = novastr + cadena[i]
+        }
+      }
+
+    //  if (sumar = "si") { novastr = novastr + cadena[i]}
+
+     
+    // novastr = novastr + cadena[i]
+    return novastr
+    }
+  
+    
+
+
 
 
 function sortArray(arr) {
@@ -66,6 +182,27 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+var nuevoarreglo = new Array
+var prueba = new Array
+var ar1 = new Array
+var ar2 = new Array
+ar1 = arreglo1
+ar2 = arreglo2
+
+for (let i = 0; i <= ar1.length - 1; i++) { //Bucle que itera primera matriz)
+
+    for (let z = 0; z <=ar2.length - 1; z++) { //Bucle que itera segunda matriz)
+        prueba.push ("arreglo1 es " + ar1[i])
+        prueba.push("arreglo2 es " +ar2[z])
+       if (ar1[i] === ar2[z])    { nuevoarreglo.push (ar1[i]) } //Comparar valores
+         
+                                             
+    }
+    
+}
+ 
+
+return nuevoarreglo
 }
 
 
