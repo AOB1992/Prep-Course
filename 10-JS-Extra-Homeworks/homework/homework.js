@@ -87,12 +87,95 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  a = " "
-  b = " "
 
-  if (a === b) {return "Siiii"}
-return "noooo"
-} 
+  //PRIMERO HACER CON UN FOR PASANDO LETRA POR LETRA
+//UNA MATRIZ DE MATRICES DE DOS VALORES QUE SIGNIFICAN INICIO 
+//Y FIN DE CADA PALABRA
+
+erreycor = new Array
+
+erreyagregado = new Array
+borrado = new Array
+lastindex = 0
+
+for (i = 0; i <= str.length - 1; i++) {
+
+if ( str[i] === " ") { // SI ES UN ESPACIO MARCAR LAS COORDENADAS DE LA PALABRA ANTERIOR
+//erreyagregado.push(lastindex + 1)
+//erreyagregado.push(i)
+//erreycor.push(erreyagregado)
+erreycor.push(i)
+//erreycor.push(str[i])
+lastindex = i
+//erreyagregado = borrado
+}
+}
+
+//erreycor.push(erreycor.length) //AGREGAR UNA MAS PARA QUE AGARRE LA ULTIMA PALABRA
+//GENERAR MATRIZ DE PALABRAS
+erreypalabras = new Array
+var indexstart = 0
+var indexfinish = 1
+var cantidadpalabras = 0
+var palabra = ""
+cantidadpalabras = erreycor.length 
+
+for ( z = 0; z <= cantidadpalabras; z++) { //BUCLE PARA ITERAR TODAS LAS PALABRAS
+
+  indexfinish = erreycor[z]
+  if (z === cantidadpalabras ) { indexfinish = str.length }    //SI ES LA PALABRA FINAL PONER INDEXFINISH STR.LENGHT
+  for ( i= indexstart; i < indexfinish ; i++) {// BUCLE QUE CREA UNA PALABRA
+
+    palabra = palabra + str[i]
+    
+    
+    
+    }//TERMINA BUCLE QUE CREA PALABRA
+    erreypalabras.push(palabra)
+    indexstart = indexfinish + 1
+    palabra = ""
+  }//TERMINA BUCLE PALABRAS
+
+  //AHORA DAR VUELTA LAS PALABRAS DE LA MATRIZ ERREYPALABRAS
+    erreypalabrasback = new Array
+  //FUNCIÓN DAR VUELTA PALABRA
+  wordbackable = "casa"
+  cuenta = wordbackable.length - 1
+  wordresultado = ""
+
+  for (z  = 0; z <= erreypalabras.length - 1; z++) { //BUCLE ITERA MATRIZ
+    wordbackable = erreypalabras[z]
+
+    cuenta = wordbackable.length - 1
+
+    for (i= 0; i<= wordbackable.length - 1; i++) { //BUCLE DA VUELTA PALABRA
+      wordresultado = wordresultado + wordbackable[cuenta]
+      cuenta = cuenta - 1
+      
+      } // FIN BUCLE DA VUELTA PALABRA
+      erreypalabrasback.push(wordresultado)
+      wordresultado = ""
+  }//FIN BUCLE ITERA MATRIZ
+  
+  resposta = ""
+
+  //PASAR DE MATRIZ erreypalabrasback A STRING resposta
+
+  for (i = 0; i<= erreypalabrasback.length - 1; i++) {
+
+    if ( i === 0) {
+      resposta = resposta  + erreypalabrasback[i]
+    } else  {
+      resposta = resposta + " " + erreypalabrasback[i]
+    }
+    
+  }
+
+    return resposta
+}
+
+
+
 
 
 function capicua(numero){
