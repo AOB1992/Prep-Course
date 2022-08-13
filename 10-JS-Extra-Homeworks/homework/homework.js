@@ -256,6 +256,18 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  lista = new Array
+  lista = arr
+  novamatriz = new Array
+  for (let z = 1; z < 20; z++){
+
+    for ( let i = 0; i < lista.length ; i++ ){
+      if (lista[i].length === z ) { novamatriz.push(lista[i] )}
+
+
+    }
+  }
+return novamatriz
 }
 
 
